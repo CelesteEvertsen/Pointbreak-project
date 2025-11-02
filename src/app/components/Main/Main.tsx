@@ -22,6 +22,7 @@ export default async function Main({ data }: Props) {
           <h1>{data.headline}</h1>
          { data.underOverskrift && <h2>{data.underOverskrift}</h2>}
           </div>
+          <h1>block</h1>
           </div>
         </article>
       ))}
