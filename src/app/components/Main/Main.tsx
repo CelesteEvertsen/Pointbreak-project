@@ -36,6 +36,7 @@ import type { Main } from '@/payload-types'
 import Image from 'next/image'
 import style from './Main.module.css'
 
+
 type Props = {
   data: Main[]
 }
@@ -69,7 +70,6 @@ export default async function Main({ data }: Props) {
                 {item.underOverskrift && <h2>{item.underOverskrift}</h2>}
               </div>
             </div>
-            <pre>{JSON.stringify(item, null, 2)}</pre>
           </article>
         )
       })}
