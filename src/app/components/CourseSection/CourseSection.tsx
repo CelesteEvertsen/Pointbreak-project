@@ -42,7 +42,7 @@ export default function CourseSection ({data}: CourseProps){
               <p className={style.price}>{info.CoursePrice}</p>
               <p className={style.people}> {info.AmoutOfPeople} personer</p>
               <p className={style.description}>{info.Description}</p>
-              <Link href={`home/${info.slug}`}>
+              <Link href={`course/${info.slug}`}>
                 <button type="button" className={style.button}>
                   {info.Button}
                 </button>
