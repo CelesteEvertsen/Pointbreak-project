@@ -2,7 +2,6 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import RenderBlocks from '@/renderBlocks/RendeBlocks'
 
-
 type Params = {
   params: { slug: string }
 }
@@ -19,6 +18,7 @@ export default async function Page({ params }: Params) {
       },
     },
   })
+  /*Da vet vi at slug-feltene du bruker faktisk ligger inne i blokken, og ikke i selve main-collectionen — derfor var punktnotasjonen ("block.slug") nødvendig. */
 
   const home = queryResults.docs[0]
   if (!home) {
