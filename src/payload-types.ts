@@ -186,8 +186,46 @@ export interface Main {
    * Font farge
    */
   overlayTekstFarge?: string | null;
+  block: CourseBlock[];
   updatedAt: string;
   createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CourseBlock".
+ */
+export interface CourseBlock {
+  /**
+   * Hvilken side-URL skal siden vises på? PS: må være unik.
+   */
+  slug?: string | null;
+  /**
+   * Bilde til kurs kort
+   */
+  CourseImage: number | Media;
+  /**
+   * Overskrift for pris
+   */
+  CoursePrice: string;
+  /**
+   * Overskrift med kurs
+   */
+  CourseName: string;
+  /**
+   * Hvor mange deltakerer
+   */
+  AmoutOfPeople: number;
+  /**
+   * Beskrivelse
+   */
+  Description: string;
+  /**
+   * Knapper
+   */
+  Button: string;
+  id?: string | null;
+  blockName?: string | null;
+  blockType: 'CourseBlock';
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
@@ -321,8 +359,28 @@ export interface MainSelect<T extends boolean = true> {
   underOverskrift?: T;
   overlayTekstPosisjon?: T;
   overlayTekstFarge?: T;
+  block?:
+    | T
+    | {
+        CourseBlock?: T | CourseBlockSelect<T>;
+      };
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "CourseBlock_select".
+ */
+export interface CourseBlockSelect<T extends boolean = true> {
+  slug?: T;
+  CourseImage?: T;
+  CoursePrice?: T;
+  CourseName?: T;
+  AmoutOfPeople?: T;
+  Description?: T;
+  Button?: T;
+  id?: T;
+  blockName?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

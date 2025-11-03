@@ -1,3 +1,4 @@
+import { CourseBlock } from '@/block/CoursesBlock'
 import { CollectionConfig } from 'payload'
 
 export const Main: CollectionConfig = {
@@ -58,6 +59,13 @@ export const Main: CollectionConfig = {
         description: 'Font farge',
       },
     },
+    {
+        name: 'block',
+        label: 'SideBlock',
+        type: 'blocks',
+        required: true,
+        blocks:[CourseBlock]
+    }
   
   ],
 }
