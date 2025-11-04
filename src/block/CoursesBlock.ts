@@ -1,4 +1,5 @@
 import { Block } from 'payload'
+import {lexicalEditor} from "@payloadcms/richtext-lexical"
 
 export const CourseBlock: Block = {
   slug: 'CourseBlock',
@@ -17,6 +18,17 @@ export const CourseBlock: Block = {
       admin: {
         description: "Hvilken side-URL skal siden vises på? PS: må være unik."
       }
+    },
+    {
+      name:"content",
+      label: "Kursinnhold",
+      type:"richText",
+      required:true,
+      editor: lexicalEditor(),
+      admin:{
+        description:"Detaljer for kurset",
+      }
+/*https://payloadcms.com/docs/rich-text/converters#example-retrieving-the-editor-config-from-an-existing-field */
     },
     {
       name: 'CourseImage',
