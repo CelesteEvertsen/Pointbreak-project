@@ -40,7 +40,7 @@ export default function CourseSection({ data }: CourseProps) {
             <div className={style.content}>
               <div className={style.courseDescription}>
                 <p>
-                  {info.CourseName} {info.CoursePrice} {info.AmoutOfPeople}
+                 Kurs: {info.CourseName} - Pris: {info.CoursePrice} - Personer: {info.AmoutOfPeople}
                 </p>
               </div>
 
