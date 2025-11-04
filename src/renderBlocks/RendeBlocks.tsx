@@ -1,6 +1,6 @@
 import CourseSection from '@/app/components/CourseSection/CourseSection'
 import { CourseBlock } from '@/payload-types'
-import { Fragment } from 'react'
+import style from "./RendeBlocks.module.css"
 
 type CustomBlock = CourseBlock
 type RenderBlocksProps ={
@@ -12,7 +12,7 @@ export default function RenderBlocks({blocks}:RenderBlocksProps){
         return null
     }
     return(
-        <>
+        <section className={style.section}>
  {blocks.map((block) => {
         const courseImage =
           typeof block.CourseImage === 'object'
@@ -41,6 +41,6 @@ export default function RenderBlocks({blocks}:RenderBlocksProps){
           />
         )
       })}
-        </>
+        </section>
     )
 }

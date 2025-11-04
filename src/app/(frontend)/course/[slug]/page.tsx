@@ -19,7 +19,7 @@ export default async function Page({ params }: Params) {
       },
     },
   })
-  /*Da vet vi at slug-feltene du bruker faktisk ligger inne i blokken, og ikke i selve main-collectionen — derfor var punktnotasjonen ("block.slug") nødvendig. */
+  /*Da vet vi at slug-feltene som brukes faktisk ligger inne i blokken, og ikke i selve main-collectionen — derfor var punktnotasjonen ("block.slug") nødvendig. */
 
   const home = queryResults.docs[0]
   if (!home) {
