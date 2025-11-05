@@ -1,0 +1,9 @@
+.home{
+    border: 1px solid white;
+}
+.links{
+    display: flex;
+    justify-content: end;
+    margin: 0 1rem;
+    gap: 1rem;
+}
