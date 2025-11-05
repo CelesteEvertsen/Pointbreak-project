@@ -200,6 +200,24 @@ export interface CourseBlock {
    */
   slug?: string | null;
   /**
+   * Detaljer for kurset
+   */
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  /**
    * Bilde til kurs kort
    */
   CourseImage: number | Media;
@@ -373,6 +391,7 @@ export interface MainSelect<T extends boolean = true> {
  */
 export interface CourseBlockSelect<T extends boolean = true> {
   slug?: T;
+  content?: T;
   CourseImage?: T;
   CoursePrice?: T;
   CourseName?: T;
