@@ -32,7 +32,6 @@ export default async function HomePage() {
           <TravelCard data={post} />
         </div>
       </main>
-      {/*  <pre>{JSON.stringify(queryResults, null,2)}</pre>  */}
     </div>
   )
 }
