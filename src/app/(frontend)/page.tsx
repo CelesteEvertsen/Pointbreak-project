@@ -3,7 +3,6 @@ import { getPayload } from 'payload'
 import config from '@/payload.config'
 import Header from "@/app/components/Header/Header"
 import RenderBlocks from '@/renderBlocks/RendeBlocks'
-import Footer from "@/app/components/Footer/Footer"
 import TravelCard from '../components/TravelCard/TravelCard'
 import './styles.css'
 
@@ -24,16 +23,19 @@ export default async function HomePage() {
 
   return (
     <div className='home'>
-    <Header data={main}/>
-    <main className='main'>
-    <RenderBlocks blocks={main[0]?.block}/>
-    <TravelCard data={post}/>
-    </main>
-    <footer>
-    <Footer/>
-    </footer>
-   {/*  <pre>{JSON.stringify(queryResults, null,2)}</pre>  */}
-     
+        <Header data={main}/>
+        <main className='main'>
+          <div className="course">
+          <h2>Våre kurs</h2>
+        <RenderBlocks blocks={main[0]?.block}/>
+        </div>
+        <div className='blog'>
+        <h2>Les bloggen</h2>
+        <TravelCard data={post}/>
+        </div>
+        </main>
+      {/*  <pre>{JSON.stringify(queryResults, null,2)}</pre>  */}
+        
     </div>
   )
 }

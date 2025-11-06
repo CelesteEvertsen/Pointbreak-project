@@ -1,33 +1,38 @@
-import { getPayload } from "payload";
-import config from "@payload-config";
-import { RichText } from "@payloadcms/richtext-lexical/react";
+import { getPayload } from 'payload'
+import config from '@payload-config'
+import { RichText } from '@payloadcms/richtext-lexical/react'
+import style from './PostSlug.module.css'
 
 type PageParams = {
-  params: Promise<{postSlug: string}>
-};
+  params: Promise<{ postSlug: string }>
+}
 
 export default async function BlogPostPage({ params }: PageParams) {
-  const { postSlug } = await params;
-  const payload = await getPayload({ config });
+  const { postSlug } = await params
+  const payload = await getPayload({ config })
 
   const queryResults = await payload.find({
-    collection: "posts",
+    collection: 'posts',
     where: {
       slug: {
-        equals: postSlug
-      }
-    }
-  });
+        equals: postSlug,
+      },
+    },
+  })
 
-  const post = queryResults.docs[0];
-  const createDate = new Date (post.createdAt)
-  const createString = Intl.DateTimeFormat("no").format(createDate)
+  const post = queryResults.docs[0]
+  const createDate = new Date(post.createdAt)
+  const createString = Intl.DateTimeFormat('no').format(createDate)
 
   return (
-    <main>
-      <h1>{post.title}</h1>
-      <time>{createString}</time>
-      <RichText data={post.content} />
-    </main>
-  );
+    <div className={style.container}>
+      <header className={style.header}>
+        <h1>{post.title}</h1>
+      </header>
+      <main className={style.main}>
+        <time>Publisert: {createString}</time> 
+        <RichText data={post.content} />
+      </main>
+    </div>
+  )
 }
