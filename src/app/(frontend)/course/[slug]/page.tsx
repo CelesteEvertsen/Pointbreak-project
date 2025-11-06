@@ -2,6 +2,7 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import style from './CourseSlug.module.css'
+import Link from 'next/link'
 
 type Params = {
   params: { slug: string }
@@ -30,9 +31,11 @@ export default async function Page({ params }: Params) {
 
   return (
     <article className={style.container}>
-      <header className={style.header}>
-        <h1>{course.CourseName}</h1>
-      </header>
+      <Link className={style.header} href={'/course'}>
+        <header>
+          <h1>{course.CourseName}</h1>
+        </header>
+      </Link>
 
       <div className={style.main}>
         <h2>Krus: {course.CourseName}</h2>
