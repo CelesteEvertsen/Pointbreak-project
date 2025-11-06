@@ -20,6 +20,14 @@ export const Posts: CollectionConfig = {
       name: 'slug',
       required: true,
     },
+      {
+        name:"Description",
+        type:"textarea",
+        required:true,
+         admin:{
+            description: "Beskrivelse"
+        }
+    },
     {
       type: 'richText',
       name: 'content',

@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.header {
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: none;
+
+}
+
+.main {
+  margin: 0 3rem;
+  padding: 0 auto;
+}

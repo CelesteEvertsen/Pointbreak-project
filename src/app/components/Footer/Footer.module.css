@@ -1,5 +1,8 @@
-.home{
-    border: 1px solid white;
+.footer{
+    border: 1px solid rgb(0, 0, 0);
+    height: 10vh;
+    background-color: black;
+    color: white;
 }
 .links{
     display: flex;

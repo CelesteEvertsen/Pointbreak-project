@@ -18,6 +18,7 @@ html,
 body,
 #app {
   height: 100%;
+  margin: 0;
 }
 
 body {
@@ -27,13 +28,29 @@ body {
 
   margin: 0;
   color: black;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: 1024px) {
     font-size: 15px;
     line-height: 24px;
   }
 }
+.course{
+  h2{
+    text-align: center;
+    font-size: 6rem;
+   
+  }
+}
 
+.blog{
+    h2{
+    text-align: center;
+    font-size: 6rem;
+   
+  }
+}
 img {
   max-width: 100%;
   height: auto;
@@ -84,14 +101,3 @@ a {
   }
 }
 
-.home{
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto;
-}
-.main{
-   border: 10px solid rgb(164, 224, 0);
-}
-footer{
-  border: 10px solid orange;
-}
