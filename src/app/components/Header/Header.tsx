@@ -1,16 +1,16 @@
 
 import type { Main } from '@/payload-types'
 import Image from 'next/image'
-import style from './Main.module.css'
+import style from './Header.module.css'
 
 
 type Props = {
   data: Main[]
 }
 
-export default async function Main({ data }: Props) {
+export default async function Header({ data }: Props) {
   return (
-    <main className={style.main}>
+    <header className={style.header}>
       {data.map((item) => {
         // Sjekk om headerImage er et objekt eller string
         const headerImage =
@@ -40,6 +40,6 @@ export default async function Main({ data }: Props) {
           </article>
         )
       })}
-    </main>
+    </header>
   )
 }
