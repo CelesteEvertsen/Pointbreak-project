@@ -40,15 +40,14 @@ export default function CourseSection({ data }: CourseProps) {
             <div className={style.content}>
               <div className={style.courseDescription}>
                 <p>
-                 Kurs: {info.CourseName} - Pris: {info.CoursePrice} - Personer: {info.AmoutOfPeople}
+                  Kurs: {info.CourseName} - Pris: {info.CoursePrice} - Personer:{' '}
+                  {info.AmoutOfPeople}
                 </p>
               </div>
 
               <p className={style.description}>{info.Description}</p>
-              <Link href={`course/${info.slug}`}>
-                <button type="button" className={style.button}>
-                  {info.Button}
-                </button>
+              <Link className={style.button} href={`course/${info.slug}`}>
+                {info.Button}
               </Link>
             </div>
           </section>

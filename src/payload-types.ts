@@ -255,6 +255,10 @@ export interface Post {
   id: number;
   title: string;
   slug: string;
+  /**
+   * Beskrivelse
+   */
+  Description: string;
   content: {
     root: {
       type: string;
@@ -441,6 +445,7 @@ export interface CourseBlockSelect<T extends boolean = true> {
 export interface PostsSelect<T extends boolean = true> {
   title?: T;
   slug?: T;
+  Description?: T;
   content?: T;
   image?: T;
   updatedAt?: T;

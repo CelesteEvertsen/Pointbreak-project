@@ -89,9 +89,7 @@ a {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
 }
-.main{
-   border: 10px solid rgb(164, 224, 0);
-}
+
 footer{
   border: 10px solid orange;
 }
