@@ -67,6 +67,7 @@ export const CourseBlock: Block = {
     {
         name:"Description",
         type:"textarea",
+        maxLength:120,
         required:true,
          admin:{
             description: "Beskrivelse"
