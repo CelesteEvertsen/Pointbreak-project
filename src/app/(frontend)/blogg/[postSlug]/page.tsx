@@ -2,6 +2,7 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import style from './PostSlug.module.css'
+import Link from 'next/link'
 
 type PageParams = {
   params: Promise<{ postSlug: string }>
@@ -26,11 +27,13 @@ export default async function BlogPostPage({ params }: PageParams) {
 
   return (
     <div className={style.container}>
-      <header className={style.header}>
-        <h1>{post.title}</h1>
-      </header>
+      <Link className={style.header} href="/">
+        <header >
+          <h1>{post.title}</h1>
+        </header>
+      </Link>
       <main className={style.main}>
-        <time>Publisert: {createString}</time> 
+        <time>Publisert: {createString}</time>
         <RichText data={post.content} />
       </main>
     </div>
