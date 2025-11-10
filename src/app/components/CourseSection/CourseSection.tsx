@@ -40,9 +40,11 @@ export default function CourseSection({ data }: CourseProps) {
             <div className={style.content}>
               <div className={style.courseDescription}>
                 <p>
-                  Kurs: {info.CourseName} - Pris: {info.CoursePrice} - Personer:{' '}
-                  {info.AmoutOfPeople}
+                  {info.CourseName} 
                 </p>
+                <p>Pris: {info.CoursePrice} Personer:{' '}
+                  {info.AmoutOfPeople}</p>
+                  <p></p>
               </div>
 
               <p className={style.description}>{info.Description}</p>
