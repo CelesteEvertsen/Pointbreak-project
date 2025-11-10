@@ -37,5 +37,6 @@ export default async function BlogPostPage({ params }: PageParams) {
         <RichText data={post.content} />
       </main>
     </div>
+    
   )
 }

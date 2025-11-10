@@ -3,6 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  margin-bottom: 2rem;
 }
 .header {
   font-size: 3rem;
@@ -16,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 10rem;
+  gap: 1rem;
 }
 .content {
   margin: 0 3rem;

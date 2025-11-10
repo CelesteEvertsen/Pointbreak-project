@@ -38,7 +38,7 @@ export default async function Page({ params }: Params) {
       </Link>
 
       <div className={style.main}>
-        <h2>Krus: {course.CourseName}</h2>
+        <p>Krus: {course.CourseName}</p>
         <p>Pris: {course.CoursePrice}</p>
         <p>Antall Deltakere: {course.AmoutOfPeople}</p>
       </div>

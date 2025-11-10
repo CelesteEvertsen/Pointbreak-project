@@ -10,7 +10,7 @@ html {
   font-size: 18px;
   line-height: 32px;
 
-  background: rgb(255, 255, 255);
+  background: rgba(228, 227, 224, 0.836);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -31,10 +31,7 @@ body {
   display: flex;
   flex-direction: column;
 
-  @media (max-width: 1024px) {
-    font-size: 15px;
-    line-height: 24px;
-  }
+  
 }
 .course{
   h2{
@@ -50,6 +47,14 @@ body {
     font-size: 6rem;
    
   }
+  
+  @media (max-width: 700px) {
+    h2{
+      font-size: 4rem;
+    }
+  
+  }
+
 }
 img {
   max-width: 100%;

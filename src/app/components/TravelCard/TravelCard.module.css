@@ -3,11 +3,10 @@
   grid-template-columns: 1fr 1fr;
   gap: 8rem;
   align-items: center;
-  margin: 3.5rem 0rem;
+  margin: 3.5rem 1rem;
  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
  border-radius: 1rem;
  padding: 1rem 1rem;
- 
 }
 .content {
   display: flex;
@@ -39,3 +38,9 @@
   text-align: center;
   
 }
+@media (max-width: 800px) {
+   .card{
+    grid-template-columns: 1fr;
+    gap: 2rem;
+   }
+  }

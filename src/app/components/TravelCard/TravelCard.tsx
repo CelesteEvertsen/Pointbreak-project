@@ -21,15 +21,7 @@ export default function TravelCard({ data }: Props) {
 
         return (
           <article key={post.id} className={style.card}>
-            <div className={style.content}>
-              <h3 className={style.title}>{post.title}</h3>
-              <p>{post.Description}</p>
-              <Link className={style.button} href={`/blogg/${post.slug}`}>
-                Les mer
-              </Link>
-            </div>
-
-            {cardImage && (
+              {cardImage && (
               <Image
                 src={cardImage.url}
                 alt={cardImage.alt || `Bilde for posten: ${post.title}`}
@@ -38,6 +30,23 @@ export default function TravelCard({ data }: Props) {
                 className={style.image}
               />
             )}
+            <div className={style.content}>
+              <h3 className={style.title}>{post.title}</h3>
+              <p>{post.Description}</p>
+              <Link className={style.button} href={`/blogg/${post.slug}`}>
+                Les mer
+              </Link>
+            </div>
+
+          {/*   {cardImage && (
+              <Image
+                src={cardImage.url}
+                alt={cardImage.alt || `Bilde for posten: ${post.title}`}
+                height={300}
+                width={400}
+                className={style.image}
+              />
+            )} */}
           </article>
         )
       })}
