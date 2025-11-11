@@ -40,6 +40,18 @@ body {
    
   }
 }
+@media (max-width: 800px) {
+   .course{
+ h2{
+      font-size: 4rem;
+    }
+  }
+ 
+}
+@media (max-width: 1000px) {
+ 
+}
+
 
 .blog{
     h2{

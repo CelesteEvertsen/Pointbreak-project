@@ -34,3 +34,26 @@
     margin: 0;
   }
 }
+@media (max-width: 800px) {
+  .overlay {
+    h1{
+    font-size: 2rem;
+    margin: 1rem;
+    }
+    h2{
+      font-size: 1rem;
+    }
+  }
+ 
+}
+@media (max-width: 1000px) {
+  .overlay {
+    h1{
+    font-size: 2rem;
+    margin: 1rem;
+    }
+    h2{
+      font-size: 1rem;
+    }
+  }
+}
