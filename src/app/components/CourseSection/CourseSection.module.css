@@ -8,7 +8,7 @@
    width: 20rem;
    height:fit-content;
   margin: 1rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  
   transition: transform 0.2s ease;
   padding: 1rem 0;
 }
@@ -37,7 +37,7 @@
 }
 .courseDescription{
  height: fit-content;
- box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ background-color: rgba(233, 250, 135, 0.192);
   color: black;
 
 }
