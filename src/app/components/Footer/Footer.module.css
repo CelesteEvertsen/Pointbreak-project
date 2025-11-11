@@ -4,36 +4,43 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   gap: 1rem;
-  div{
-   display: flex;
+  div {
+    display: flex;
     flex-direction: column;
-   line-height: 2;
+    line-height: 2;
     margin: 0.5rem auto;
-   
   }
- 
 }
 .links {
-    justify-content: center;
-    button{
-        margin-top: 1rem;
-        padding: 0.5rem 1rem;
-        background-color: #0070f3;
-        color: white;
-        border: none;
-        border-radius: 0.25rem;
-        cursor: pointer;
-    }
-    button:hover{
-        scale: 1.1;
-    }
+  justify-content: center;
+  button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+  }
+  button:hover {
+    scale: 1.1;
+  }
 }
-.flag{
-    background-color: rgb(255, 255, 255);
-    display:flex;
-    justify-content: right;
-   gap: 10px;
-   padding-right: 1rem;
-
-
+.flag {
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+  padding-right: 1rem;
+}
+@media (max-width: 800px) {
+  .footer {
+    grid-template-columns: auto;
+    text-align: center;
+  }
+  .flag {
+    justify-content: space-evenly;
+    gap: 0px;
+    padding: 1.5rem 0rem;
+  }
 }
