@@ -1,4 +1,3 @@
-
 import type { Main } from '@/payload-types'
 import Image from 'next/image'
 import style from './Header.module.css'
