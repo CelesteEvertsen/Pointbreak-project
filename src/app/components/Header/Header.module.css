@@ -24,12 +24,12 @@
   background-color: rgba(59, 40, 40, 0.527);
   text-align: center;
   h1{
-    color: white;
+    color: var(--textColor);
     font-size: 4rem;
     margin: 0;
   }
   h2{
-    color: white;
+    color: var(--textColor);
     font-size: 2rem;
     margin: 0;
   }

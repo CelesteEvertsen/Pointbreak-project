@@ -19,6 +19,8 @@ Vær gjerne tydlige på hva som kan gjøre bedre her, og hvorfor.
 
 Dato for Tavel/Blogg ble laget i ett eget komponent som Heter DateAndTme, der jeg bruker props for å kunne gjennbruke det flere steder.
 
+overlayTekstPosisjon funker ikke, jeg glemte å fikse den før innlevering. Grunne til at jeg ikke fjernet den, er da jeg ikke ville miste alt innholdet jeg har lagt til i backend(bilder, tekst)
+
 usikker på  om dere må ha innloggingen jeg lagde
 bruker navn: email@email.com
 passord:  email@email.com
