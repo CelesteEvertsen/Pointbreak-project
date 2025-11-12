@@ -2,7 +2,6 @@ import type { Main } from '@/payload-types'
 import Image from 'next/image'
 import style from './Header.module.css'
 
-
 type Props = {
   data: Main[]
 }
@@ -13,13 +12,14 @@ export default async function Header({ data }: Props) {
       {data.map((item) => {
         // Sjekk om headerImage er et objekt eller string
         const headerImage =
-          typeof item.headerImage === "object"
+          typeof item.headerImage === 'object'
             ? {
-              url: item.headerImage.url || "",
-            alt: item.headerImage.alt || ""}
+                url: item.headerImage.url || '',
+                alt: item.headerImage.alt || '',
+              }
             : null
-const textColor = item.overlayTekstFarge || 'white';
-const textPosition = item.overlayTekstPosisjon || 'center';
+        const textColor = item.overlayTekstFarge || 'white'
+        const textPosition = item.overlayTekstPosisjon || 'center'
 
         return (
           <article key={item.id} className={style.article}>
@@ -27,13 +27,17 @@ const textPosition = item.overlayTekstPosisjon || 'center';
               {headerImage && (
                 <Image
                   src={headerImage.url}
-                  alt={headerImage.alt || ""}
+                  alt={headerImage.alt || ''}
                   height={600}
                   width={600}
                   className={style.image}
                 />
               )}
-              <div className={style.overlay} data-position={textPosition} style={{"--textColor": textColor}  as React.CSSProperties}>
+              <div
+                className={style.overlay}
+                data-position={textPosition}
+                style={{ '--textColor': textColor } as React.CSSProperties}
+              >
                 <h1>{item.headline}</h1>
                 {item.underOverskrift && <h2>{item.underOverskrift}</h2>}
               </div>
