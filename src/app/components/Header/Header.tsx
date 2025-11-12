@@ -20,6 +20,7 @@ export default async function Header({ data }: Props) {
             alt: item.headerImage.alt || ""}
             : null
 const textColor = item.overlayTekstFarge || 'white';
+const textPosition = item.overlayTekstPosisjon || 'center';
 
         return (
           <article key={item.id} className={style.article}>
@@ -33,7 +34,7 @@ const textColor = item.overlayTekstFarge || 'white';
                   className={style.image}
                 />
               )}
-              <div className={style.overlay} style={{"--textColor": textColor}  as React.CSSProperties}>
+              <div className={style.overlay} data-position={textPosition} style={{"--textColor": textColor}  as React.CSSProperties}>
                 <h1>{item.headline}</h1>
                 {item.underOverskrift && <h2>{item.underOverskrift}</h2>}
               </div>

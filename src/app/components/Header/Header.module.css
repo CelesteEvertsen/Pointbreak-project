@@ -20,7 +20,6 @@
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   background-color: rgba(59, 40, 40, 0.527);
   text-align: center;
   h1{
@@ -33,6 +32,40 @@
     font-size: 2rem;
     margin: 0;
   }
+}
+
+.overlay[data-position='top-left'] {
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  padding: 2rem;
+}
+
+.overlay[data-position='top-right'] {
+  justify-content: flex-start;
+  align-items: flex-end;
+  text-align: right;
+  padding: 2rem;
+}
+
+.overlay[data-position='bottom-left'] {
+  justify-content: flex-end;
+  align-items: flex-start;
+  text-align: left;
+  padding: 2rem;
+}
+
+.overlay[data-position='bottom-right'] {
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+  padding: 2rem;
+}
+
+.overlay[data-position='center'] {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 @media (max-width: 800px) {
   .overlay {
