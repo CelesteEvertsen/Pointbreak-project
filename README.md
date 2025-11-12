@@ -23,6 +23,7 @@ as React.CSSProperties: ble brukt her fordi Typescript klage på textColor " doe
 kilde: https://stackoverflow.com/questions/52005083/how-to-define-css-variables-in-style-attribute-in-react-and-typescript
 
 
+Valte å beholde linken til Admin, usikker på om dere ønsket den.
 usikker på  om dere må ha innloggingen jeg lagde
 bruker navn: email@email.com
 passord:  email@email.com
