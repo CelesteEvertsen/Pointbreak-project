@@ -19,7 +19,7 @@ export default async function AllCourses() {
         <h1>Våre Kurs</h1>
       </header>
       </Link>
-      <main>
+      <main className={style.main}>
         <RenderBlocks blocks={main[0]?.block} />
       </main>
     </>
