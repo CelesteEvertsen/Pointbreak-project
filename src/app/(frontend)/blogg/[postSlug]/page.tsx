@@ -1,29 +1,21 @@
-import { getPayload } from 'payload'
-import config from '@payload-config'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import style from './PostSlug.module.css'
 import Link from 'next/link'
 import DateAndTime from '@/app/components/DateAndTime/DateAndTime'
+import {notFound} from 'next/navigation'
+import {getPostSlug} from '@/app/data/Posts'
 
-type PageParams = {
+ type PageParams = {
   params: Promise<{ postSlug: string }>
 }
 
-export default async function BlogPostPage({ params }: PageParams) {
+export default async function BlogPostPage( { params }: PageParams ) {
   const { postSlug } = await params
-  const payload = await getPayload({ config })
-
-  const queryResults = await payload.find({
-    collection: 'posts',
-    where: {
-      slug: {
-        equals: postSlug,
-      },
-    },
-  })
-
-  const post = queryResults.docs[0]
-
+ const post = await getPostSlug(postSlug)
+if(!post){
+  return notFound()
+}/* Denne typeGarden, fjerne feil meldingen som typescript klager på, at post er undefined. Grunnen til det er da  jeg "garanterer" at post finnes hvis koden fortsetter etter if-bl0kken
+Hei type, post har garanter verdi hvis koden fortsetter forbi her */
   return (
     <div className={style.container}>
       <Link className={style.header} href="/">
@@ -33,7 +25,7 @@ export default async function BlogPostPage({ params }: PageParams) {
       </Link>
       <main className={style.main}>
         <DateAndTime date={post.createdAt} prefix='Publisert'/>
-        <RichText data={post.content} />
+       { post.content && <RichText data={post.content} />}
       </main>
     </div>
     

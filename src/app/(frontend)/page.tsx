@@ -1,24 +1,14 @@
 import React from 'react'
-import { getPayload } from 'payload'
-import config from '@/payload.config'
+import { getPosts } from '@/app/data/Posts'
+import { getMain } from '@/app/data/Main'
 import Header from '@/app/components/Header/Header'
 import RenderBlocks from '@/renderBlocks/RendeBlocks'
 import TravelCard from '../components/TravelCard/TravelCard'
 import './styles.css'
 
 export default async function HomePage() {
-  const payloadConfig = await config
-  const payload = await getPayload({ config: payloadConfig })
-
-  const queryResults = await payload.find({
-    collection: 'main',
-  })
-  const queryResultsPost = await payload.find({
-    collection: 'posts',
-  })
-  const main = queryResults.docs
-  const post = queryResultsPost.docs
-
+  const main = await getMain()
+  const post = await getPosts()
   return (
     <div className="home">
       <Header data={main} />

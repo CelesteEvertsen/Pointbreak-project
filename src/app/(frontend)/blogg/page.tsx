@@ -1,15 +1,10 @@
-import { getPayload } from 'payload'
-import config from '@payload-config'
+import {getPosts} from '@/app/data/Posts'
 import TravelCard from '@/app/components/TravelCard/TravelCard'
 import style from './BloggPage.module.css'
 import Link from 'next/link'
 
 export default async function BlogPage() {
-  const payload = await getPayload({ config })
-  const queryResults = await payload.find({
-    collection: 'posts',
-  })
-  const post = queryResults.docs
+ const post = await getPosts()
   return (
     <div className={style.container}>
       <header>
