@@ -3,6 +3,7 @@ import config from '@payload-config'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import style from './PostSlug.module.css'
 import Link from 'next/link'
+import DateAndTime from '@/app/components/DateAndTime/DateAndTime'
 
 type PageParams = {
   params: Promise<{ postSlug: string }>
@@ -22,8 +23,6 @@ export default async function BlogPostPage({ params }: PageParams) {
   })
 
   const post = queryResults.docs[0]
-  const createDate = new Date(post.createdAt)
-  const createString = Intl.DateTimeFormat('no').format(createDate)
 
   return (
     <div className={style.container}>
@@ -33,7 +32,7 @@ export default async function BlogPostPage({ params }: PageParams) {
         </header>
       </Link>
       <main className={style.main}>
-        <time>Publisert: {createString}</time>
+        <DateAndTime date={post.createdAt} prefix='Publisert'/>
         <RichText data={post.content} />
       </main>
     </div>

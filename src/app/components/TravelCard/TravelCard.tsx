@@ -2,6 +2,7 @@ import type { Post } from '@/payload-types'
 import Image from 'next/image'
 import style from './TravelCard.module.css'
 import Link from 'next/link'
+import DateAndTime from '../DateAndTime/DateAndTime'
 
 type Props = {
   data: Post[]
@@ -31,22 +32,14 @@ export default function TravelCard({ data }: Props) {
               />
             )}
             <div className={style.content}>
+              
               <h3 className={style.title}>{post.title}</h3>
+               <DateAndTime date={post.createdAt}/>
               <p>{post.Description}</p>
               <Link className={style.button} href={`/blogg/${post.slug}`}>
                 Les mer
               </Link>
             </div>
-
-          {/*   {cardImage && (
-              <Image
-                src={cardImage.url}
-                alt={cardImage.alt || `Bilde for posten: ${post.title}`}
-                height={300}
-                width={400}
-                className={style.image}
-              />
-            )} */}
           </article>
         )
       })}
