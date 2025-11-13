@@ -1,17 +1,10 @@
 import RenderBlocks from '@/renderBlocks/RendeBlocks'
-import { getPayload } from 'payload'
-import config from '@/payload.config'
 import style from './CoursePage.module.css'
 import Link from 'next/link'
+import{getMain} from '@/app/data/Main'
 
 export default async function AllCourses() {
-  const payloadConfig = await config
-  const payload = await getPayload({ config: payloadConfig })
-
-  const queryResults = await payload.find({
-    collection: 'main',
-  })
-  const main = queryResults.docs
+  const main = await getMain()
   return (
     <>
     <Link className={style.header} href="/">

@@ -26,6 +26,11 @@ kilde: https://stackoverflow.com/questions/52005083/how-to-define-css-variables-
 header.tsx --> data-position, kilder som hjalp meg her:
 https://developer.mozilla.org/en-US/docs/Web/HTML/How_to/Use_data_attributes
 
+data(mappe) her har jeg laget props på post og main slik at jeg kan gjenbruke det andre steder.
+Så at jeg hadde bruk samme kode flere steder, å prøvde meg på props
+
+
+
 Valte å beholde linken til Admin, usikker på om dere ønsket den.
 usikker på  om dere må ha innloggingen jeg lagde
 bruker navn: email@email.com

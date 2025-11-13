@@ -1,7 +1,8 @@
 import style from './CourseSection.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-
+import { IoPersonOutline } from "react-icons/io5";
+import { TbMoneybag  } from "react-icons/tb";
 type CourseImage = {
   id: number
   alt?: string
@@ -38,13 +39,14 @@ export default function CourseSection({ data }: CourseProps) {
             </div>
 
             <div className={style.content}>
+              <h1>{info.CourseName}</h1>
               <div className={style.courseDescription}>
-                <p>
-                  {info.CourseName} 
-                </p>
-                <p>Pris: {info.CoursePrice} Personer:{' '}
-                  {info.AmoutOfPeople}</p>
-                  <p></p>
+                <div>
+                <IoPersonOutline/> {info.AmoutOfPeople}
+                </div>
+                <div>
+                <TbMoneybag /> {info.CoursePrice}
+                </div>
               </div>
 
               <p className={style.description}>{info.Description}</p>

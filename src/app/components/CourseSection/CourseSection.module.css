@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   align-items: center;
   background-color: #f8f9fa;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   width: 20rem;
   height: fit-content;
   margin: 1rem auto;
@@ -36,11 +36,18 @@
 }
 .courseDescription {
   height: fit-content;
-  background-color: rgba(233, 250, 135, 0.192);
+  background-color: rgba(233, 250, 135, 0.403);
   color: black;
+  display: flex;
+ justify-content: space-evenly;
 }
 .content {
   text-align: center;
+  h1{
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .name {
@@ -50,18 +57,15 @@
 }
 
 .price {
-  color: #0070f3;
   font-weight: 500;
   margin-bottom: 0.5rem;
 }
 
 .people {
-  color: #555;
   margin-bottom: 0.5rem;
 }
 
 .description {
-  color: #666;
   font-size: 0.95rem;
   margin-bottom: 1rem;
   width: 100%;
@@ -83,5 +87,7 @@
 }
 
 .button:hover {
-  background-color: #0059c9;
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid black;
 }

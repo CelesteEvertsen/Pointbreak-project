@@ -1,34 +1,27 @@
-import { getPayload } from 'payload'
-import config from '@payload-config'
+import { getMainslug } from '@/app/data/Main'
 import { RichText } from '@payloadcms/richtext-lexical/react'
 import style from './CourseSlug.module.css'
 import Link from 'next/link'
+import { notFound } from 'next/navigation'
 
 type Params = {
   params: { slug: string }
 }
 
-export default async function Page({ params }: Params) {
+export default async function CoursePage({ params }: Params) {
   const { slug } = params
-  const payload = await getPayload({ config })
-
-  const queryResults = await payload.find({
-    collection: 'main',
-    where: {
-      'block.slug': {
-        equals: slug,
-      },
-    },
-  })
-
-  const home = queryResults.docs[0]
+  const home = await getMainslug(slug)
   if (!home) {
-    return <h1>Fant ikke siden</h1>
+    return notFound()
   }
 
   const course = home.block.find((block) => block.slug === slug)
-  if (!course) return <h1>Fant ingen kurs</h1>
+  if (!course) return notFound()
 
+    /* Denne typeGarden, fjerne feil meldingen som typescript klager på, 
+    at post er undefined. Grunnen til det er da  jeg "garanterer" 
+    at post finnes hvis koden fortsetter etter if-bl0kken
+Hei type, post har garanter verdi hvis koden fortsetter forbi her */
   return (
     <article className={style.container}>
       <Link className={style.header} href={'/course'}>
