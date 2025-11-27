@@ -1,4 +1,68 @@
+.mainContainer {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-auto-rows: 1fr;
+  margin: 0.4rem 0.3rem;
+
+}
+
 .card {
+  background-color: rgb(255, 255, 255);
+  padding: 1em;
+  border-radius: 0.5rem;
+   gap: 10px;
+}
+.content {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+ 
+  h1 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+}
+.image {
+  height: 20rem;
+  margin: 0 auto;
+}
+.courseDescription {
+  height: fit-content;
+  background-color: rgba(233, 250, 135, 0.403);
+  color: black;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.contentInnholdP {
+  height: 5rem;
+  margin: 0rem auto;
+}
+
+.contentButton {
+  background-color: black;
+  color: white;
+  padding: 0.6rem 1.25rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+}
+
+.contentButton:hover {
+  background-color: #ffffff;
+  color: black;
+  border: 1px solid black;
+}
+
+/* ******************************** */
+
+/* .card {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -91,3 +155,4 @@
   color: black;
   border: 1px solid black;
 }
+ */

@@ -1,3 +1,4 @@
+import React from 'react'
 import RenderBlocks from '@/renderBlocks/RendeBlocks'
 import style from './CoursePage.module.css'
 import Link from 'next/link'

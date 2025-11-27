@@ -1,3 +1,4 @@
+import React from 'react'
 import CourseSection from '@/app/components/CourseSection/CourseSection'
 import { CourseBlock } from '@/payload-types'
 import style from "./RendeBlocks.module.css"
