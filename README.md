@@ -35,3 +35,25 @@ Valte å beholde linken til Admin, usikker på om dere ønsket den.
 usikker på  om dere må ha innloggingen jeg lagde
 bruker navn: email@email.com
 passord:  email@email.com
+
+### Begrunnelse (sensor Vegar)
+Vegar Norman (Internal assessor)
+Besvarelsen din er godkjent siden den oppfyller kravene i oppgaven og vel så det, og jeg synes du har fått til mye bra med Payload selv om du reflekterer over at du ikke helt har forståelsen på plass riktig ennå.
+
+Jeg strevde litt med å finne ut av hvordan du har lagt til kurs på siden, helt til jeg fant ut at kursene var kodet som blokker og lagt til i hovedside-innholdet. Her kunne du nok med fordel ha laget en egen innholdssamling for kurs; dersom en redaktør for denne siden skulle legge til et nytt kurs eller endre på et eksisterende, er det stor sjanse for at denne redaktøren ville blitt forvirret. Jeg tenker at dette hører til i en innholdssamling; en grei måte å skille de to fra hverandre på er at blokker brukes hovedsaklig til presentasjon, mens innholdssamlinger er for faktisk innhold som skal lagres i databasen. Jeg synes du løste dette på en interessant måte allikevel med tanke på routing der du henter ut innholdet og deretter filtrerer på blokkene; det har jeg ikke sett før og jeg synes det viser at du tenker over hvordan ting er strukturert i koden din.
+
+Jeg liker godt måten du henter ut data på, med funksjoner som ligger i en data-mappe; jeg har ikke sett dette gjort akkurat sånn før og synes det var en smart måte å modularisere på. Jeg vet ikke om du har sett dette gjort på denne måten et annet sted, men jeg stjeler den til senere for det var smart strukturert.
+
+Jeg vil gi deg ros for hvordan du har laget hero-banneret og linket det opp mot Payload; muligheten for å flytte på tekst på denne måten er akkurat sånn funksjonalitet de som er webredaktører setter pris på.
+
+Du sliter litt med mappestrukturen din og at ting ligger litt her og der. Komponenter bør alltid ligge i en mappe som heter “components” og bare der; nå ligger komponentene litt strødd rundt omkring i prosjektet. For eksempel burde renderBlocks ha vært lagt sammen med de andre komponentene. Om du er usikker på hvor noe egentlig skal ligge, er det lurt å bestemme seg for én mappe og legge ting der frem til du vet at du må flytte på dem. Det fører til mindre rot på sikt.
+
+Et tips er å se på eksempelprosjektene til Payload og Next, ettersom disse kan gi deg noen gode tips om hvordan andre strukturerer koden sin. Det er ikke alltid det er én universell regel som gjelder, og en del har å gjøre med smak og behag, men når du har noen konkrete eksempler du kan gå ut fra kan det hende at det gir litt mer mening for deg å se hvordan andre har gjort det.
+
+Jeg synes innholdssamlingene dine og hvordan de presenteres i Payload er godt strukturert, med unntak av det som gjelder kurs som jeg allerede har nevnt. Fin bruk av labels og hjelpetekster som gjør det lettere å forstå hva feltene gjør.
+
+Utseendemessig synes jeg nettsiden er fin å se på. Jeg vet at jeg har sett den navigasjonen du har brukt før i eksamensoppgaven din. Her er det viktig at du kildehenviser og refererer til deg selv, for gjenbruk av kode fra andre oppgaver kan regnes som plagiat dersom du ikke kildehenviser. I dette tilfellet lar jeg den gå og gjør deg oppmerksom på det sånn at du vet det til senere; i en eksamenssituasjon hadde dette vært strengere. Jeg synes ellers at du har gjort en god jobb med å dele opp i gjenbrukbare komponenter og bruke modulær styling.
+
+Som en helhet er det litt puss og pirk, men jeg synes du har levert et godt resultat. Jeg forstår at temaet rundt Payload er litt vanskelig ennå, for det bærer refleksjonen din preg av; samtidig må jeg si at jeg synes det virker som om du forstår og håndterer teknologien veldig bra. Jeg anbefaler deg å fortsette å jobbe med temaet og fortsette å lage ting, for jo mer mengdetrening du får, jo bedre sitter det.
+
+Bra jobbet!

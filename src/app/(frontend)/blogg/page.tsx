@@ -1,3 +1,4 @@
+import React from 'react'
 import {getPosts} from '@/app/data/Posts'
 import TravelCard from '@/app/components/TravelCard/TravelCard'
 import style from './BloggPage.module.css'

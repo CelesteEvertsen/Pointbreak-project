@@ -1,8 +1,8 @@
 import style from './CourseSection.module.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { IoPersonOutline } from "react-icons/io5";
-import { TbMoneybag  } from "react-icons/tb";
+import { IoPersonOutline } from 'react-icons/io5'
+import { TbMoneybag } from 'react-icons/tb'
 type CourseImage = {
   id: number
   alt?: string
@@ -25,12 +25,13 @@ type CourseProps = {
 
 export default function CourseSection({ data }: CourseProps) {
   return (
-    <div className={style.container}>
+    <div className={style.mainContainer}>
       <section className={style.card}>
         {data.map((info) => (
           <section key={info.Description}>
             <div className={style.imageWrapper}>
               <Image
+                className={style.image}
                 src={info.CourseImage?.url || '/fallback.jpg'}
                 alt={info.CourseImage?.alt || info.CourseName}
                 width={600}
@@ -39,20 +40,26 @@ export default function CourseSection({ data }: CourseProps) {
             </div>
 
             <div className={style.content}>
-              <h1>{info.CourseName}</h1>
-              <div className={style.courseDescription}>
-                <div>
-                <IoPersonOutline/> {info.AmoutOfPeople}
-                </div>
-                <div>
-                <TbMoneybag /> {info.CoursePrice}
-                </div>
+              <div className={style.contentInnhold}>
+                <h1>{info.CourseName}</h1>
               </div>
 
-              <p className={style.description}>{info.Description}</p>
-              <Link className={style.button} href={`course/${info.slug}`}>
-                {info.Button}
-              </Link>
+              <div className={style.courseDescription}>
+                <div>
+                  <IoPersonOutline /> {info.AmoutOfPeople}
+                </div>
+                <div>
+                  <TbMoneybag /> {info.CoursePrice}
+                </div>
+              </div>
+              <div className={style.contentInnholdP}>
+                <p className={style.description}>{info.Description}</p>
+              </div>
+              
+                <Link className={style.contentButton} href={`course/${info.slug}`}>
+                  {info.Button}
+                </Link>
+            
             </div>
           </section>
         ))}
