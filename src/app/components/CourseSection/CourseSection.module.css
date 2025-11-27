@@ -52,6 +52,7 @@
   transition: background-color 0.2s ease;
   text-align: center;
   text-decoration: none;
+  margin-top: 0.5rem;
 }
 
 .contentButton:hover {
